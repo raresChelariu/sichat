@@ -1,0 +1,13 @@
+C:\Users\Rares\RiderProjects\proiectsi\EncryptionLib\bin\Debug\netcoreapp3.1\EncryptionLib.exe
+C:\Users\Rares\RiderProjects\proiectsi\EncryptionLib\bin\Debug\netcoreapp3.1\EncryptionLib.deps.json
+C:\Users\Rares\RiderProjects\proiectsi\EncryptionLib\bin\Debug\netcoreapp3.1\EncryptionLib.runtimeconfig.json
+C:\Users\Rares\RiderProjects\proiectsi\EncryptionLib\bin\Debug\netcoreapp3.1\EncryptionLib.runtimeconfig.dev.json
+C:\Users\Rares\RiderProjects\proiectsi\EncryptionLib\bin\Debug\netcoreapp3.1\EncryptionLib.dll
+C:\Users\Rares\RiderProjects\proiectsi\EncryptionLib\bin\Debug\netcoreapp3.1\EncryptionLib.pdb
+C:\Users\Rares\RiderProjects\proiectsi\EncryptionLib\obj\Debug\netcoreapp3.1\EncryptionLib.csprojAssemblyReference.cache
+C:\Users\Rares\RiderProjects\proiectsi\EncryptionLib\obj\Debug\netcoreapp3.1\EncryptionLib.AssemblyInfoInputs.cache
+C:\Users\Rares\RiderProjects\proiectsi\EncryptionLib\obj\Debug\netcoreapp3.1\EncryptionLib.AssemblyInfo.cs
+C:\Users\Rares\RiderProjects\proiectsi\EncryptionLib\obj\Debug\netcoreapp3.1\EncryptionLib.csproj.CoreCompileInputs.cache
+C:\Users\Rares\RiderProjects\proiectsi\EncryptionLib\obj\Debug\netcoreapp3.1\EncryptionLib.dll
+C:\Users\Rares\RiderProjects\proiectsi\EncryptionLib\obj\Debug\netcoreapp3.1\EncryptionLib.pdb
+C:\Users\Rares\RiderProjects\proiectsi\EncryptionLib\obj\Debug\netcoreapp3.1\EncryptionLib.genruntimeconfig.cache

@@ -32,16 +32,45 @@ namespace EncryptionLib
 
             #region TESTING ECB ON BLOCKLIST (WORKS!)
             
-            const string input = "Ginko biloba, aloha";
+            /*const string input = "Ginko biloba, aloha";
             var keyForList = new CryptoBlock(null, 8);
+            var ivForList = new CryptoBlock(null, 2);
             var inputList = Stringify.FromStringToBlockList(input);
-            var encryptedList = BlockLists.EncryptBlockList(inputList, keyForList, BlockLists.EncryptionMode.ECB);
-            var decryptedList = BlockLists.DecryptBlockList(encryptedList, keyForList, BlockLists.EncryptionMode.ECB);
+            var encryptedList = BlockLists.EncryptBlockList(inputList, keyForList, null, BlockLists.EncryptionMode.ECB);
+            var decryptedList = BlockLists.DecryptBlockList(encryptedList, keyForList, null, BlockLists.EncryptionMode.ECB);
+            
             Console.WriteLine("Input : {0}", input);
             Console.WriteLine("Input list: {0}", Stringify.FromBlockListToString(inputList));
             Console.WriteLine("Encrypted list: {0}", Stringify.FromBlockListToString(encryptedList));
-            Console.WriteLine("Decrypted string: {0}", Stringify.FromBlockListToString(decryptedList));
+            Console.WriteLine("Decrypted string: {0}", Stringify.FromBlockListToString(decryptedList));*/
             
+            #endregion
+
+            #region TESTING CBC (WORKS!)  
+            
+            /*var inputString = "hey look at THIS TEXT DUDE its getting really really longggggggggg";
+            var encryptionKey = new CryptoBlock(null, 4);
+            var encryptionIv = new CryptoBlock(null, 7);
+            
+            var inputBlocks = Stringify.FromStringToBlockList(inputString);
+            var encryptedBlocks = BlockLists.EncryptBlockList(inputBlocks, encryptionKey, encryptionIv, BlockLists.EncryptionMode.CBC);
+            var decryptedBlocks = BlockLists.DecryptBlockList(encryptedBlocks, encryptionKey, encryptionIv, BlockLists.EncryptionMode.CBC);
+            var encryptedString = Stringify.FromBlockListToString(encryptedBlocks);
+            var decryptedString = Stringify.FromBlockListToString(decryptedBlocks);
+            Console.WriteLine("# : " + inputBlocks.Count);
+            Console.WriteLine("@ : " + encryptedBlocks.Count);
+            Console.WriteLine("Input string          : {0}", inputString);         
+            Console.WriteLine("Encrypted blocks      : {0}", encryptedBlocks);
+            Console.WriteLine("Decrypted string      : {0}", Stringify.FromBlockListToString(decryptedBlocks));
+            Console.WriteLine("Encrypted string      : {0}", encryptedString);
+            Console.WriteLine("Decrypted string      : {0}", decryptedString);*/
+            
+            #endregion
+
+            #region TESTING CFB 
+
+            
+
             #endregion
         }
 

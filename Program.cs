@@ -85,7 +85,6 @@ namespace EncryptionLib
             var decryptedList = BlockLists.DecryptBlockList(encryptedList, key, iv, BlockLists.EncryptionMode.OFB);
             Console.WriteLine("Encrypted {0}", Stringify.FromBlockListToString(encryptedList));
             Console.WriteLine("decrypted {0}", Stringify.FromBlockListToString(decryptedList));
-
         }
 
         // ReSharper disable once UnusedMember.Local

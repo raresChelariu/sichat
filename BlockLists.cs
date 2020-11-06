@@ -82,24 +82,38 @@ namespace EncryptionLib
 
         #endregion
         
-        #region MODE OFB (NOT IMPLEMENTED)
+        #region MODE OFB (DONE)
         private static LinkedList<CryptoBlock> EncryptOFB_BlockList(LinkedList<CryptoBlock> blockList, CryptoBlock key, CryptoBlock iv)
         {
-            throw new NotImplementedException();
+            if (blockList == null || blockList.Count == 0 || blockList.First == null)
+                throw new ArgumentNullException(nameof(blockList));
+            var outputList = new LinkedList<CryptoBlock>();
+            var lastIv = iv;
+            for (var block = blockList.First; block != null; block = block.Next)
+            {
+                lastIv = lastIv.Encrypt(key);
+                outputList.AddLast(lastIv ^ block.Value);
+            }
+            return outputList;
         }
         private static LinkedList<CryptoBlock> DecryptOFB_BlockList(LinkedList<CryptoBlock> blockList, CryptoBlock key, CryptoBlock iv)
         {
-            throw new NotImplementedException();
+            return EncryptOFB_BlockList(blockList, key, iv);
         }
         
         #endregion
 
-        #region MODE CFB (NOT IMPLEMENTED)
+        #region MODE CFB (IN PROGRESS)
         private static LinkedList<CryptoBlock> DecryptCFB_BlockList(LinkedList<CryptoBlock> blockList, CryptoBlock key,
             CryptoBlock iv)
         {
             var outputList = new LinkedList<CryptoBlock>();
-            
+            var lastBlock = iv;
+            for (var block = blockList.First; block != null; block = block.Next)
+            {
+                var currentBlock = lastBlock.Encrypt(key) ^ lastBlock;
+                outputList.AddLast(currentBlock);
+            }
             return outputList;
         }
         private static LinkedList<CryptoBlock> EncryptCFB_BlockList(LinkedList<CryptoBlock> blockList, CryptoBlock key, CryptoBlock iv)
@@ -112,7 +126,6 @@ namespace EncryptionLib
                 outputList.AddLast(outputedBlock);
                 lastCipher = outputedBlock;
             }
-
             return outputList;
         }
         #endregion

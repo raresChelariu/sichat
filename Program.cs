@@ -6,7 +6,15 @@ namespace EncryptionLib
     {
         private static void Main()
         {
-            #region TESTING XOR ON 2 BLOCKS (WORKS!)
+            //TestingStuff();
+            
+            //TestingOFB();
+            
+        }
+
+        private static void TestingStuff()
+        {
+                        #region TESTING XOR ON 2 BLOCKS (WORKS!)
             //var c = new CryptoBlock(null, 20);
             // var b = new CryptoBlock(new byte[]{0, 1, 0, 1});
             // Console.WriteLine(c^b);
@@ -66,12 +74,18 @@ namespace EncryptionLib
             Console.WriteLine("Decrypted string      : {0}", decryptedString);*/
             
             #endregion
+        }   
+        private static void TestingOFB()
+        {
+            var inputString = "Hello guys i'm a short string. Hello? Anyone? wuhuuuu!";
+            var key = new CryptoBlock(null, 12);
+            var iv = new CryptoBlock(null, 5);
+            var inputList = Stringify.FromStringToBlockList(inputString);
+            var encryptedList = BlockLists.EncryptBlockList(inputList, key, iv, BlockLists.EncryptionMode.OFB);
+            var decryptedList = BlockLists.DecryptBlockList(encryptedList, key, iv, BlockLists.EncryptionMode.OFB);
+            Console.WriteLine("Encrypted {0}", Stringify.FromBlockListToString(encryptedList));
+            Console.WriteLine("decrypted {0}", Stringify.FromBlockListToString(decryptedList));
 
-            #region TESTING CFB 
-
-            
-
-            #endregion
         }
 
         // ReSharper disable once UnusedMember.Local
@@ -86,5 +100,6 @@ namespace EncryptionLib
             }
             return output + "}";
         }
+
     }
 }
